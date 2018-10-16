@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<!-- saved from url=(0036)http://www.lovelytao.com/h5/fx/agent -->
+<html style="font-size: 106.667px;"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <title>合伙人系统</title>
+        
+        <meta name="format-detection" content="telephone=no">
+        <meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=no">
+        <meta name="viewport" content="initial-scale=1.0,maximum-scale=1.0,user-scalable=no" media="(device-height: 568px)">
+        <meta name="apple-mobile-web-app-capable" content="yes">
+        <meta name="apple-mobile-web-app-status-bar-style" content="grey">
+        <link rel="stylesheet" href="./合伙人系统_代理_files/h5_reset.min.css" type="text/css">
+
+                <link rel="stylesheet" type="text/css" href="./合伙人系统_代理_files/index_f846d26.css">    </head>
+    <body>
+        <script type="text/javascript">
+            window.mobileUtil = (function(win, doc) {
+                var UA = navigator.userAgent,
+                    isAndroid = /android|adr/gi.test(UA),
+                    isIOS = /iphone|ipod|ipad/gi.test(UA) && !isAndroid,
+                    isBlackBerry = /BlackBerry/i.test(UA),
+                    isWindowPhone = /IEMobile/i.test(UA),
+                    isMobile = isAndroid || isIOS || isBlackBerry || isWindowPhone;
+                return {
+                    isAndroid: isAndroid,
+                    isIOS: isIOS,
+                    isMobile: isMobile,
+                    isWeixin: /MicroMessenger/gi.test(UA)
+                };
+            })(window, document);
+
+            !(function (doc, win) {
+                var docEl = doc.documentElement,resizeEvt = 'orientationchange' in window ? 'orientationchange' : 'resize',fsize,
+                    fn = function () {
+                        var cWidth = !mobileUtil.isMobile ? 750 : docEl.clientWidth;
+                        fsize = cWidth/7.5;
+                        cWidth && (docEl.style.fontSize = 2 * fsize + 'px');
+                    };
+                fn();
+                if (!doc.addEventListener) return;
+                win.addEventListener(resizeEvt, fn, false);
+            })(document, window);
+        </script>
+
+                            <div class="nav">
+            <ul class="row">
+
+                <li class="c4">
+                    <a href="http://www.lovelytao.com/h5/fx/overview">
+                    <div>
+                                                    <img class="home-icon" src="./合伙人系统_代理_files/f9b2830f9b8840b08cd7f06a31bfc598_40x38.png" alt="">
+                                            </div>
+                    <span>概况</span>
+                    </a>
+                </li>
+
+                                    <li class="c4">
+                        <a href="http://www.lovelytao.com/h5/fx/agent">
+                        <div>
+                                                            <img class="agent-icon" src="./合伙人系统_代理_files/d85025e803031b3e17dea5b669438d36_42x42.png" alt="">
+                                                    </div>
+                        <span>代理</span>
+                        </a>
+                    </li>
+                
+                <li class="c4">
+                    <a href="http://www.lovelytao.com/h5/fx/order">
+                   <div>
+                                                  <img class="order-icon" src="./合伙人系统_代理_files/efba117e259e9d5cc49d6771eb6b67ce_40x40.png" alt="">
+                                          </div>
+                    <span>订单</span>
+                    </a>
+                </li>
+
+                <li class="c4">
+                    <a href="http://www.lovelytao.com/h5/fx/fee">
+                    <div>
+                                                    <img class="fee-icon" src="./合伙人系统_代理_files/e4eb9f496b540ddd64b4abf2201c5830_42x42.png" alt="">
+                                            </div>
+                    <span>收入</span>
+                    </a>
+                </li>
+
+            </ul>
+        </div>
+                        <style>
+
+    .red-font{
+        color: #FB3452;
+    }
+
+    .sub{
+        position: relative;
+        padding: 15px 0 15px 0;
+        text-align: center;
+        font-size: 16px;
+    }
+    .sub:before{
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        border-bottom: 1px solid #E1E1E1;
+        -webkit-box-sizing: border-box;
+        box-sizing: border-box;
+        width: 200%;
+        height: 200%;
+        -webkit-transform: scale(0.5);
+        transform: scale(0.5);
+        -webkit-transform-origin: left top;
+        transform-origin: left top;
+    }
+
+    .expand .title:after{
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        border-bottom: 1px solid #E1E1E1;
+        -webkit-box-sizing: border-box;
+        box-sizing: border-box;
+        width: 200%;
+        height: 200%;
+        -webkit-transform: scale(0.5);
+        transform: scale(0.5);
+        -webkit-transform-origin: left top;
+        transform-origin: left top;
+    }
+
+    .expand .title{
+        position: relative;
+        padding: 0 15px;
+        height: 55px;
+        line-height: 55px;
+        /*border-bottom: 1px solid #E1E1E1;*/
+    }
+
+    .expand .title b{
+        color: #030303;
+        font-size: 16px;
+        vertical-align: top;
+    }
+    .expand .title .rt{
+        float: right;
+        padding-right: 40px;
+        font-size: 12px;
+        color: #9A9A9A;
+    }
+    .expand .title .icon{
+        position: absolute;
+        right: 20px;
+        top: 24px;
+        width: 12px;
+        height: 7px;
+        background: url(http://oss2.lanlanlife.com/10489df3878830b203a99b8432e4a33b_14x24.png) no-repeat;
+        background-size: 100%;
+    }
+    .expand .panel{
+        display: none;
+        position: relative;
+        padding: 10px 0;
+    }
+    .expand.on .panel{
+        display: block;
+    }
+    .expand .panel:before{
+        content: '';
+        position: absolute;
+        top: 0;
+        height: 10px;
+        width: 100%;
+        background-color: #FBF7F6;
+    }
+    .expand .panel:after{
+        content: '';
+        position: absolute;
+        bottom: 0;
+        height: 10px;
+        width: 100%;
+        background-color: #FBF7F6;
+    }
+    .expand .panel li{
+        position: relative;
+        text-align: center;
+        padding: 15px 0;
+        font-size: 14px;
+        color: #696969;
+    }
+    .expand .panel li:before{
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        border-top: 1px solid #E1E1E1;
+        -webkit-box-sizing: border-box;
+        box-sizing: border-box;
+        width: 200%;
+        height: 200%;
+        -webkit-transform: scale(0.5);
+        transform: scale(0.5);
+        -webkit-transform-origin: left top;
+        transform-origin: left top;
+    }
+    .expand .panel .c2{
+        padding: 0 40px;
+        text-align: left;
+        box-sizing: border-box;
+    }
+    .expand .panel li p{
+        padding-bottom: 10px;
+    }
+    .expand .panel li p + span{
+        font-size: 12px;
+    }
+</style>
+<div id="app" class="container"><div infinite-scroll-immediate-check="false" infinite-scroll-disabled="isEnd" infinite-scroll-distance="50" style="width: 100%; height: 100%; overflow: auto;"><div class="header"><span>我的代理</span> <a href="http://www.lovelytao.com/h5/fx/agent/search" class="find"></a></div> <p class="sub">下级代理(1)</p> <div class="expand on"><div class="title"><b>AA黄小华</b> <span class="rt">今日效果预估 ¥ 00.00</span> <span class="icon"></span></div> <ul class="panel"><li class="row"><div class="c2"><p>今日订单数</p> <span class="red-font">0</span></div> <div class="c2"><p>今日效果预估</p> <span class="red-font">¥0</span></div></li> <li class="row"><div class="c2"><p>本月订单数</p> <span class="red-font">0</span></div> <div class="c2"><p>本月效果预估</p> <span class="red-font">¥0</span></div></li> <li class="row"><div class="c2"><p>上月订单数</p> <span class="red-font">0</span></div> <div class="c2"><p>上月效果预估</p> <span class="red-font">¥0</span></div></li> <li class="row"><div class="c2"><p>上月结算订单数</p> <span class="red-font">0</span></div> <div class="c2"><p>上月结算收入</p> <span class="red-font">¥0</span></div></li></ul></div></div></div>
+<script>
+    var vm_agentName = '';
+</script>
+                
+    <script type="text/javascript" src="./合伙人系统_代理_files/vue.2.0.min.js.下载"></script>
+    <script type="text/javascript" src="./合伙人系统_代理_files/vue-resource.js.下载"></script>
+    <script type="text/javascript" src="./合伙人系统_代理_files/infinite-scroll_99c35fc.js.下载"></script>
+    <script type="text/javascript" src="./合伙人系统_代理_files/index_bf742f5.js.下载"></script>
+
+    
+
+</body></html>

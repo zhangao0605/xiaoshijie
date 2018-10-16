@@ -1,0 +1,16 @@
+Vue.http.options.emulateJSON = !0;
+var vm = new Vue({
+    el: "#app", data: function () {
+        return {amount: "", name: "", account: ""}
+    }, methods: {
+        clear: function () {
+            this.amount = "", this.account = "", this.notApplyIncome = ""
+        }, saveData: function () {
+            var t = {amount: this.amount, name: this.name, account: this.account};
+            return "" === this.mount || "" === this.account || "" === this.name ? void alert("提现信息不能为空！") : void this.$http.post("/h5/fx/fee/apply", t).then(function (t) {
+                var a = JSON.parse(t.data);
+                1001 === a.status.code ? (alert("提现已申请，请到提现详情查看"), location.href = "/h5/fx/fee") : alert(a.status.msg)
+            }.bind(this))
+        }
+    }
+});

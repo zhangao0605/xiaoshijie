@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<!-- saved from url=(0034)http://www.lovelytao.com/h5/fx/fee -->
+<html style="font-size: 106.667px;"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <title>合伙人系统</title>
+        
+        <meta name="format-detection" content="telephone=no">
+        <meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=no">
+        <meta name="viewport" content="initial-scale=1.0,maximum-scale=1.0,user-scalable=no" media="(device-height: 568px)">
+        <meta name="apple-mobile-web-app-capable" content="yes">
+        <meta name="apple-mobile-web-app-status-bar-style" content="grey">
+        <link rel="stylesheet" href="./合伙人系统_收入_files/h5_reset.min.css" type="text/css">
+
+                <link rel="stylesheet" type="text/css" href="./合伙人系统_收入_files/index_f846d26.css">    </head>
+    <body>
+        <script type="text/javascript">
+            window.mobileUtil = (function(win, doc) {
+                var UA = navigator.userAgent,
+                    isAndroid = /android|adr/gi.test(UA),
+                    isIOS = /iphone|ipod|ipad/gi.test(UA) && !isAndroid,
+                    isBlackBerry = /BlackBerry/i.test(UA),
+                    isWindowPhone = /IEMobile/i.test(UA),
+                    isMobile = isAndroid || isIOS || isBlackBerry || isWindowPhone;
+                return {
+                    isAndroid: isAndroid,
+                    isIOS: isIOS,
+                    isMobile: isMobile,
+                    isWeixin: /MicroMessenger/gi.test(UA)
+                };
+            })(window, document);
+
+            !(function (doc, win) {
+                var docEl = doc.documentElement,resizeEvt = 'orientationchange' in window ? 'orientationchange' : 'resize',fsize,
+                    fn = function () {
+                        var cWidth = !mobileUtil.isMobile ? 750 : docEl.clientWidth;
+                        fsize = cWidth/7.5;
+                        cWidth && (docEl.style.fontSize = 2 * fsize + 'px');
+                    };
+                fn();
+                if (!doc.addEventListener) return;
+                win.addEventListener(resizeEvt, fn, false);
+            })(document, window);
+        </script>
+
+                            <div class="nav">
+            <ul class="row">
+
+                <li class="c4">
+                    <a href="http://www.lovelytao.com/h5/fx/overview">
+                    <div>
+                                                    <img class="home-icon" src="./合伙人系统_收入_files/f9b2830f9b8840b08cd7f06a31bfc598_40x38.png" alt="">
+                                            </div>
+                    <span>概况</span>
+                    </a>
+                </li>
+
+                                    <li class="c4">
+                        <a href="http://www.lovelytao.com/h5/fx/agent">
+                        <div>
+                                                            <img class="agent-icon" src="./合伙人系统_收入_files/2e33108a11b152ac310bd22d80863566_42x42.png" alt="">
+                                                    </div>
+                        <span>代理</span>
+                        </a>
+                    </li>
+                
+                <li class="c4">
+                    <a href="http://www.lovelytao.com/h5/fx/order">
+                   <div>
+                                                  <img class="order-icon" src="./合伙人系统_收入_files/efba117e259e9d5cc49d6771eb6b67ce_40x40.png" alt="">
+                                          </div>
+                    <span>订单</span>
+                    </a>
+                </li>
+
+                <li class="c4">
+                    <a href="http://www.lovelytao.com/h5/fx/fee">
+                    <div>
+                                                    <img class="fee-icon" src="./合伙人系统_收入_files/767541c821690c034dfe5da181aff93e_44x42.png" alt="">
+                                            </div>
+                    <span>收入</span>
+                    </a>
+                </li>
+
+            </ul>
+        </div>
+                        
+<style>
+    .red{
+        color: #FB3452;
+    }
+    .green{
+        color: #58CB69;
+    }
+    .subject{
+        position: relative;
+        padding: 15px;
+        font-size: 14px;
+        color: #696969;
+        /*border-bottom: 1px solid #E1E1E1;*/
+    }
+    .subject:after{
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        border-bottom: 1px solid #E1E1E1;
+        -webkit-box-sizing: border-box;
+        box-sizing: border-box;
+        width: 200%;
+        height: 200%;
+        -webkit-transform: scale(0.5);
+        transform: scale(0.5);
+        -webkit-transform-origin: left top;
+        transform-origin: left top;
+    }
+    .total{
+        padding: 20px 0;
+        text-align: center;
+    }
+    .total .c2 p{
+        margin-top: 10px;
+        padding-bottom: 10px;
+        color: #030303;
+        font-size: 14px;
+    }
+    .total .c2 p + span{
+        display: block;
+        color: #FB3452;
+        font-size: 18px;
+    }
+    .total .c2 p + span i{
+        font-size: 12px;
+        font-style: normal;
+    }
+    .total .c2 b{
+        padding: 10px 0;
+        display: block;
+        color: #B2B2B2;
+        font-size: 10px;
+    }
+    .total .c2 a{
+        display: block;
+        margin: 0 auto;
+        width:90px;
+        height: 36px;
+        line-height: 36px;
+        color: #FFF;
+        border-radius: 2px;
+        font-size: 13px;
+        background-color: #FF2A64;
+    }
+    .fee-lists > p{
+        position: relative;
+        padding: 20px 15px;
+        color: #030303;
+        font-size: 16px;
+        font-weight: bold;
+    }
+    .fee-lists >p:before{
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        border-bottom: 1px solid #E1E1E1;
+        border-top: 1px solid #E1E1E1;
+        -webkit-box-sizing: border-box;
+        box-sizing: border-box;
+        width: 200%;
+        height: 200%;
+        -webkit-transform: scale(0.5);
+        transform: scale(0.5);
+        -webkit-transform-origin: left top;
+        transform-origin: left top;
+    }
+    table{
+        width: 100%;
+    }
+
+    table thead tr{
+        height: 50px;
+        line-height: 50px;
+        font-size: 14px;
+        border-bottom: .5px solid #E1E1E1;
+    }
+    table thead th{
+        text-align: center;
+        padding: 0 10px;
+        color: #696969;
+    }
+    table tbody tr{
+        height: 60px;
+        line-height: 60px;
+        border-bottom: .5px solid #E1E1E1;
+        text-align: center;
+        box-sizing: content-box;
+        background-color: #FFF;
+        font-size: 12px;
+    }
+    table td{
+        padding: 0 10px;
+    }
+</style>
+
+<div id="app" class="container"><div infinite-scroll-immediate-check="false" infinite-scroll-disabled="isEnd" infinite-scroll-distance="50" style="width: 100%; height: 100%; overflow: auto;"><div class="header"><span>我的账户</span></div> <div class="subject">账号: AA黄小艳36</div> <div class="total"><ul class="row"><li class="c2"><p>剩余可提现金额</p> <span>¥ 0.<i>.00</i></span> <b>&nbsp;</b> <a href="http://www.lovelytao.com/h5/fx/fee/applyAccount" class="btn">提现</a></li> <li class="c2"><p>提现金额</p> <span>¥ 0.<i>.00</i></span> <b>(未收款金额 ¥0)</b> <a href="http://www.lovelytao.com/h5/fx/fee/applyList" class="btn">查看详情</a></li></ul></div> <div class="fee-lists"><p>收入明细</p> <table><colgroup><col width="100px"><col width="100px"><col width="100px"></colgroup> <thead><tr><th>时间</th> <th>总可提现收入</th> <th>状态</th></tr></thead> <tbody><tr><td>2017年04月</td> <td><span class="red">¥0</span></td> <td><span class="green">可提现</span> </td></tr></tbody></table></div></div></div>
+
+                
+    <script type="text/javascript" src="./合伙人系统_收入_files/vue.2.0.min.js.下载"></script>
+    <script type="text/javascript" src="./合伙人系统_收入_files/vue-resource.js.下载"></script>
+    <script type="text/javascript" src="./合伙人系统_收入_files/infinite-scroll_99c35fc.js.下载"></script>
+    <script type="text/javascript" src="./合伙人系统_收入_files/index_c3fff95.js.下载"></script>
+
+    
+
+</body></html>

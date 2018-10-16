@@ -1,0 +1,317 @@
+<!DOCTYPE html>
+<!-- saved from url=(0036)http://www.lovelytao.com/h5/fx/order -->
+<html style="font-size: 106.667px;"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <title>合伙人系统</title>
+        
+        <meta name="format-detection" content="telephone=no">
+        <meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=no">
+        <meta name="viewport" content="initial-scale=1.0,maximum-scale=1.0,user-scalable=no" media="(device-height: 568px)">
+        <meta name="apple-mobile-web-app-capable" content="yes">
+        <meta name="apple-mobile-web-app-status-bar-style" content="grey">
+        <link rel="stylesheet" href="./合伙人系统_订单_files/h5_reset.min.css" type="text/css">
+
+                <link rel="stylesheet" type="text/css" href="./合伙人系统_订单_files/index_f846d26.css">    </head>
+    <body>
+        <script type="text/javascript">
+            window.mobileUtil = (function(win, doc) {
+                var UA = navigator.userAgent,
+                    isAndroid = /android|adr/gi.test(UA),
+                    isIOS = /iphone|ipod|ipad/gi.test(UA) && !isAndroid,
+                    isBlackBerry = /BlackBerry/i.test(UA),
+                    isWindowPhone = /IEMobile/i.test(UA),
+                    isMobile = isAndroid || isIOS || isBlackBerry || isWindowPhone;
+                return {
+                    isAndroid: isAndroid,
+                    isIOS: isIOS,
+                    isMobile: isMobile,
+                    isWeixin: /MicroMessenger/gi.test(UA)
+                };
+            })(window, document);
+
+            !(function (doc, win) {
+                var docEl = doc.documentElement,resizeEvt = 'orientationchange' in window ? 'orientationchange' : 'resize',fsize,
+                    fn = function () {
+                        var cWidth = !mobileUtil.isMobile ? 750 : docEl.clientWidth;
+                        fsize = cWidth/7.5;
+                        cWidth && (docEl.style.fontSize = 2 * fsize + 'px');
+                    };
+                fn();
+                if (!doc.addEventListener) return;
+                win.addEventListener(resizeEvt, fn, false);
+            })(document, window);
+        </script>
+
+                            <div class="nav">
+            <ul class="row">
+
+                <li class="c4">
+                    <a href="http://www.lovelytao.com/h5/fx/overview">
+                    <div>
+                                                    <img class="home-icon" src="./合伙人系统_订单_files/f9b2830f9b8840b08cd7f06a31bfc598_40x38.png" alt="">
+                                            </div>
+                    <span>概况</span>
+                    </a>
+                </li>
+
+                                    <li class="c4">
+                        <a href="http://www.lovelytao.com/h5/fx/agent">
+                        <div>
+                                                            <img class="agent-icon" src="./合伙人系统_订单_files/2e33108a11b152ac310bd22d80863566_42x42.png" alt="">
+                                                    </div>
+                        <span>代理</span>
+                        </a>
+                    </li>
+                
+                <li class="c4">
+                    <a href="http://www.lovelytao.com/h5/fx/order">
+                   <div>
+                                                  <img class="order-icon" src="./合伙人系统_订单_files/d851e83b4a63535a86b0a342ad38140b_42x38.png" alt="">
+                                          </div>
+                    <span>订单</span>
+                    </a>
+                </li>
+
+                <li class="c4">
+                    <a href="http://www.lovelytao.com/h5/fx/fee">
+                    <div>
+                                                    <img class="fee-icon" src="./合伙人系统_订单_files/e4eb9f496b540ddd64b4abf2201c5830_42x42.png" alt="">
+                                            </div>
+                    <span>收入</span>
+                    </a>
+                </li>
+
+            </ul>
+        </div>
+                        
+<style>
+    .total{
+        position: relative;
+        padding: 20px 0 25px 0;
+        text-align: center;
+    }
+    .total .c3 p{
+        margin-bottom: 10px;
+        font-size: 14px;
+    }
+    .total .c3 p + span{
+        display: block;
+        font-size: 12px;
+        color: #FB3452;
+    }
+
+    .filter{
+        color: #696969;
+        text-align: center;
+        border-top: .5px solid #E1E1E1;
+        border-bottom: .5px solid #E1E1E1;
+    }
+    .filter .row{
+        position: relative;
+        font-size: 0;
+    }
+    .filter li{
+        position: relative;
+        padding: 20px 0;
+        font-size: 14px;
+    }
+    .filter li:first-child{
+        box-sizing: border-box;
+        border-right: 1px solid #E1E1E1;
+    }
+    .filter li:first-child:after{
+        content: '';
+        position: absolute;
+        top: 24px;
+        margin-left: 5px;
+        width: 12px;
+        height: 7px;
+        background: url(http://oss2.lanlanlife.com/10489df3878830b203a99b8432e4a33b_14x24.png) no-repeat;
+        background-size: 100%;
+    }
+    .filter li:last-child:after{
+        content: '';
+        position: absolute;
+        top: 20px;
+        margin-left: 5px;
+        width: 12px;
+        height: 15px;
+        background: url(http://oss.lanlanlife.com/c7c045a5d9cc4bd604a1981a5ea39f2b_30x24.png) no-repeat;
+        background-size: 100%;
+    }
+    .filter .list{
+        display: none;
+        position: absolute;
+        top: 55px;
+        z-index: -1;
+        width: 100%;
+        background-color: #FFF;
+        box-shadow: 0 2px 4px rgba(0,0,0,.1);
+    }
+    .filter li.on .list{
+        display: block;
+        z-index: 1;
+    }
+    .filter li.on:after{
+        transform: rotate(180deg);
+    }
+    .filter .list p{
+        padding: 15px;
+        text-align: center;
+        border-bottom: 1px solid #E1E1E1;
+    }
+    .filter .list p:active{
+        background-color: #F2F2F2;
+    }
+
+    .card{
+        position: relative;
+        padding: 20px 0 30px 0;
+        color: #696969;
+    }
+    .card:after,
+    .total:after{
+        content: '';
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        height: 10px;
+        width: 100%;
+        background-color: #FBF7F6;
+    }
+    .card .no{
+        height: 25px;
+        line-height: 25px;
+        padding: 0 15px;
+        font-size: 12px;
+    }
+    .card .no span{
+        float: right;
+        width: 80px;
+        height: 25px;
+        line-height: 25px;
+        text-align: center;
+        color: #FFF;
+        font-size: 12px;
+        border-radius: 25px;
+        background-color: #C7C4C4;
+    }
+    .card .no span.a{
+        background-color: #67D477;
+    }
+    .card .no span.b{
+        background-color: #3FA6E5;
+    }
+    .card .no span.c{
+        background-color: #C7C4C4;
+    }
+    .card .title{
+        padding: 20px 15px;
+        line-height: 1.4;
+        font-size: 14px;
+    }
+    .card .c3{
+        text-align: center;
+    }
+    .card .c3 p{
+        padding-bottom: 10px;
+        font-size: 12px;
+    }
+    .card .c3 p + span{
+        display: block;
+        color: #030303;
+        font-size: 18px;
+    }
+    .card .time{
+        padding: 0 20px;
+        margin-top: 20px;
+        color: #C7C4C4;
+        font-size: 12px;
+    }
+    .card .time span{
+        float: right;
+    }
+
+    .slider{
+        position: fixed;
+        z-index: 10;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0,0,0,.5);
+        transform: translateX(100%);
+        transition: all ease .4s;
+    }
+    .slider.on{
+        transform: translateX(0);
+    }
+    .slider .content{
+        position: absolute;
+        width: 300px;
+        height: 100%;
+        top: 0;
+        right: 0;
+    }
+    .slider .content .wrapper{
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        right: 0;
+        width: 300px;
+        font-size: 12px;
+        color: #696969;
+        background-color: #FFF;
+    }
+    .slider .content .wrapper p{
+        padding-bottom: 10px;
+    }
+    .slider .content .date{
+        padding: 10px;
+    }
+    .slider .content .date .input-box{
+        padding: 10px;
+        background-color: #FEDFD4;
+    }
+    .slider .content .wrapper input{
+        width: 114px;
+        height: 30px;
+        padding: 0 5px;
+        background-color: #fff;
+        border: none;
+        -webkit-appearance: none;
+    }
+    .slider .footer-btn{
+        position: absolute;
+        bottom: 50px;
+        width: 100%;
+        height: 40px;
+        font-size: 0;
+    }
+    .slider .footer-btn button{
+        width: 50%;
+        line-height: 40px;
+        text-align: center;
+        font-size: 16px;
+        color: #030303;
+        background-color: #FBF7F6;
+    }
+    .slider .footer-btn button.red{
+        color: #FFF;
+        background-color: #FF2B63;
+    }
+</style>
+<div id="app" class="container"><div infinite-scroll-immediate-check="false" infinite-scroll-disabled="isEnd" infinite-scroll-distance="50" style="width: 100%; height: 100%; overflow: auto;"><div class="header"><span>订单</span></div> <div class="search"><form action="http://www.lovelytao.com/h5/fx/order"><input type="search" placeholder="输入订单编号" name="orderNo" value=""><button type="submit"></button></form></div> <div class="filter"><ul class="row"><li class="c2"><span>所有状态</span> <div class="list"><p>所有状态</p> <p>已付款</p> <p>已结算</p> <p>已失效</p></div></li> <li class="c2"><span>筛选</span></li></ul></div> <div class="total"><ul class="row"><li class="c3"><p>订单数</p> <span class="red-font">0</span></li> <li class="c3"><p>付款金额</p> <span class="red-font">¥0</span></li> <li class="c3"><p>效果预估</p> <span class="red-font">¥0</span></li></ul></div> <div class="order-lists"><ul></ul></div> <div class="slider"><div class="content"><div class="wrapper"><div class="date"><p><label>创建日期</label></p> <div class="input-box"><input type="date" placeholder="开始日期">
+                            -
+                            <input type="date" placeholder="结束日期"></div></div> <div class="footer-btn"><button>重置</button> <button class="red">完成</button></div></div></div></div></div></div>
+<script>
+    var vm_orderNo = '';
+</script>
+                
+    <script type="text/javascript" src="./合伙人系统_订单_files/vue.2.0.min.js.下载"></script>
+    <script type="text/javascript" src="./合伙人系统_订单_files/vue-resource.js.下载"></script>
+    <script type="text/javascript" src="./合伙人系统_订单_files/infinite-scroll_99c35fc.js.下载"></script>
+    <script type="text/javascript" src="./合伙人系统_订单_files/index_819b274.js.下载"></script>
+
+    
+
+</body></html>
